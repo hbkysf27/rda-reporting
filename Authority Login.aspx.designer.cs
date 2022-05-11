@@ -11,7 +11,7 @@ namespace RDA
 {
 
 
-    public partial class Master_Admin_Login
+    public partial class Authority_Login
     {
 
         /// <summary>

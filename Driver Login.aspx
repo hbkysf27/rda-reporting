@@ -1,16 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Master Admin Login.aspx.cs" Inherits="RDA.Master_Admin_Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Driver Login.aspx.cs" Inherits="RDA.Driver_Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-      <div class="container">
+    <div class="container">
         <div class="col-md-6 mx-auto">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
                             <center>
-                                <img width="150px" src="images/adminlogin.png" />
+                                <img width="150px" src="images/user.png" />
                             </center>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                    <div class="row">
                      <div class="col">
                         <center>
-                           <h3>ADMIN LOGIN</h3>
+                           <h3>USER LOGIN</h3>
                         </center>
                      </div>
                   </div>
@@ -30,9 +30,9 @@
 
                   <div class="row">
                      <div class="col">
-                        <label>Admin ID</label>
+                        <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Admin ID"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="User ID"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
@@ -47,7 +47,9 @@
                         </div>
                         <div class="form-group">
                             <br />
-                            
+                            <center>
+                           <a href="User Signup.aspx"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="SIGN-UP" /></a>
+                                </center>
                         </div>
                      </div>
                   </div>
@@ -59,5 +61,8 @@
 
          </div>
       </div>
+   
+   
 
+   
 </asp:Content>

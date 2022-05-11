@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,10 +71,12 @@
     <Content Include="About Us.aspx" />
     <Content Include="Admin Account Management.aspx" />
     <Content Include="Admin Login.aspx" />
+    <Content Include="Authority Login.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="Create Authorities Acc.aspx" />
     <Content Include="css\customstylesheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
@@ -91,11 +94,10 @@
     <Content Include="images\reportanaccident.png" />
     <Content Include="images\user.png" />
     <Content Include="Insurance Authority.aspx" />
-    <Content Include="Police Authority.aspx" />
     <Content Include="Police RDA Insurance.aspx" />
     <Content Include="Police.aspx" />
     <Content Include="RDA Authority.aspx" />
-    <Content Include="User Login.aspx" />
+    <Content Include="Driver Login.aspx" />
     <Content Include="Features.aspx" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
@@ -2161,7 +2163,7 @@
     <Content Include="images\signup.png" />
     <Content Include="images\vehicle track.jpg" />
     <Content Include="Master Admin Login.aspx" />
-    <Content Include="User Signup.aspx" />
+    <Content Include="Driver Signup.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -2187,6 +2189,20 @@
     <Compile Include="Admin Login.aspx.designer.cs">
       <DependentUpon>Admin Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Authority Login.aspx.cs">
+      <DependentUpon>Authority Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Authority Login.aspx.designer.cs">
+      <DependentUpon>Authority Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Create Authorities Acc.aspx.cs">
+      <DependentUpon>Create Authorities Acc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Create Authorities Acc.aspx.designer.cs">
+      <DependentUpon>Create Authorities Acc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Driver Profile.aspx.cs">
       <DependentUpon>Driver Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2207,13 +2223,6 @@
     </Compile>
     <Compile Include="Insurance Authority.aspx.designer.cs">
       <DependentUpon>Insurance Authority.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Police Authority.aspx.cs">
-      <DependentUpon>Police Authority.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Police Authority.aspx.designer.cs">
-      <DependentUpon>Police Authority.aspx</DependentUpon>
     </Compile>
     <Compile Include="Police RDA Insurance.aspx.cs">
       <DependentUpon>Police RDA Insurance.aspx</DependentUpon>
@@ -2236,12 +2245,12 @@
     <Compile Include="RDA Authority.aspx.designer.cs">
       <DependentUpon>RDA Authority.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User Login.aspx.cs">
-      <DependentUpon>User Login.aspx</DependentUpon>
+    <Compile Include="Driver Login.aspx.cs">
+      <DependentUpon>Driver Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User Login.aspx.designer.cs">
-      <DependentUpon>User Login.aspx</DependentUpon>
+    <Compile Include="Driver Login.aspx.designer.cs">
+      <DependentUpon>Driver Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Features.aspx.cs">
       <DependentUpon>Features.aspx</DependentUpon>
@@ -2272,12 +2281,12 @@
       <DependentUpon>Master Admin Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User Signup.aspx.cs">
-      <DependentUpon>User Signup.aspx</DependentUpon>
+    <Compile Include="Driver Signup.aspx.cs">
+      <DependentUpon>Driver Signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User Signup.aspx.designer.cs">
-      <DependentUpon>User Signup.aspx</DependentUpon>
+    <Compile Include="Driver Signup.aspx.designer.cs">
+      <DependentUpon>Driver Signup.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

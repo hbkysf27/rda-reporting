@@ -1,16 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="User Login.aspx.cs" Inherits="RDA.Driver_Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Authority Login.aspx.cs" Inherits="RDA.Authority_Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="container">
-        <div class="col-md-6 mx-auto">
+     <div class="container">
+        <div class="col-md-5 mx-auto">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
                             <center>
-                                <img width="150px" src="images/user.png" />
+                                <img width="150px" src="images/adminlogin.png" />
                             </center>
                         </div>
                     </div>
@@ -18,7 +17,7 @@
                    <div class="row">
                      <div class="col">
                         <center>
-                           <h3>USER LOGIN</h3>
+                           <h3>AUTHORITY LOGIN</h3>
                         </center>
                      </div>
                   </div>
@@ -29,10 +28,26 @@
                   </div>
 
                   <div class="row">
-                     <div class="col">
-                        <label>Email Address</label>
+
+                      
+                      <div class="col">
+                        <label>Account Type</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email-Address"></asp:TextBox>
+                           <select class="custom-select form-select" id="inputGroupSelect01">
+                                <option value="Police" selected>Police Authority</option>
+                                <option value="Insurance">Insurance Authority</option>
+                                 <option value="rda">RDA Authority</option>
+                                </select>
+                            </div>
+
+                        </div>
+                      </div>
+                      
+                    <div class="row">
+                     <div class="col">
+                        <label>Authority ID</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Authority ID"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
@@ -47,9 +62,7 @@
                         </div>
                         <div class="form-group">
                             <br />
-                            <center>
-                           <a href="User Signup.aspx"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="SIGN-UP" /></a>
-                                </center>
+                            
                         </div>
                      </div>
                   </div>
@@ -61,8 +74,4 @@
 
          </div>
       </div>
-   
-   
-
-   
 </asp:Content>

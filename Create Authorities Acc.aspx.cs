@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RDA
 {
-    public partial class Police_Authority : System.Web.UI.Page
+    public partial class Create_Authorities_Acc : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

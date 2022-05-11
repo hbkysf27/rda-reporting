@@ -11,7 +11,7 @@ namespace RDA
 {
 
 
-    public partial class Police_Authority
+    public partial class Create_Authorities_Acc
     {
 
         /// <summary>

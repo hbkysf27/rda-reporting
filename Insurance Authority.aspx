@@ -74,23 +74,23 @@
                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="NIC" TextMode="Number"></asp:TextBox>
                         </div>
                      </div>
-                     <div class="col-md-6">
-                        <label>Insurance Number</label>
+                      <div class="col-md-6">
+                        <label>Account Type</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Insurance Number" TextMode="Number"></asp:TextBox>
+                           <select class="custom-select form-select" id="inputGroupSelect01">
+                               <option selected value="select"></option>
+                               <option value="Insurance_Authority">Insurance Authority</option>
+                                <option vslue="Police">Police</option>
+                                 <option value="rda">RDA Authority</option>
+                                
+  </select>
+</div>
+
                         </div>
-                     </div>
                   </div>
 
 
-                   <div class="row">
-                   <div class="col-md-6">
-                        <label>Vehicle Register Number</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Vehicle Register Number"></asp:TextBox>
-                        </div>
-                     </div>
-                       </div>
+                   
 
 
                    <br />
@@ -107,20 +107,20 @@
                      <div class="col-md-4">
                         <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID" ></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
-                        <label>Old Password</label>
+                        <label>Password</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Password" TextMode="Password" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
 
                        <div class="col-md-4">
-                        <label>New Password</label>
+                        <label>Confirm Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
                         </div>
                      </div>
                     
@@ -130,7 +130,7 @@
                         <center>
                             <br />
                            <div class="form-group">
-                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="UPDATE DETAILS" />
+                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="CREATE ACCOUNT" />
                            </div>
                         </center>
                      </div>

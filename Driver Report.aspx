@@ -160,11 +160,7 @@
                             <br />
                            <div class="form-group">
                                 <asp:Button ID="Button2" runat="server" Text="Report Accident" CssClass="btn btn-success" />
-                               
-                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="UPDATE REPORT" />
-                               <br />
-                                <asp:Button class="btn btn-danger" ID="Button3" runat="server" Text="DELETE REPORT" />
-                           </div>
+                      </div>
                         </center>
                      </div>
                   </div>

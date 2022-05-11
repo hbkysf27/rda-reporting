@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="User Signup.aspx.cs" Inherits="RDA.User_Signup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Create Authorities Acc.aspx.cs" Inherits="RDA.Create_Authorities_Acc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    
-     <div class="container">
+        <div class="container">
         
       <div class="row">
          <div class="col-md-6 mx-auto">
@@ -13,14 +11,14 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="images/user.png"/>
+                           <img width="100px" src="images/adminlogin.png"/>
                         </center>
                      </div>
                   </div>
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>DRIVER SIGNUP</h4>
+                           <h4>CREATE USER ACCOUNTS</h4>
                           </center>
                      </div>
                   </div>
@@ -73,22 +71,22 @@
                         </div>
                      </div>
                      <div class="col-md-6">
-                        <label>Insurance Number</label>
+                        <label>Account Type</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Insurance Number" TextMode="Number"></asp:TextBox>
+                           <select class="custom-select form-select" id="inputGroupSelect01">
+                                <option value="Police" selected>Police Authority</option>
+                                <option value="Insurance">Insurance Authority</option>
+                                 <option value="rda">RDA Authority</option>
+                                
+  </select>
+</div>
+
                         </div>
-                     </div>
                   </div>
 
 
-                   <div class="row">
-                   <div class="col-md-6">
-                        <label>Vehicle Register Number</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Vehicle Register Number"></asp:TextBox>
-                        </div>
-                     </div>
-                       </div>
+                   
+                       
 
 
                    <br />
@@ -133,10 +131,4 @@
           </div>
             
          </div>
-    
-        
-
-
-    
-
 </asp:Content>

@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Police Authority.aspx.cs" Inherits="RDA.Police_Authority" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Driver Signup.aspx.cs" Inherits="RDA.User_Signup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-      <div class="container-fluid">
+    
+     <div class="container">
         
       <div class="row">
-         <div class="col-md-4">
+         <div class="col-md-6 mx-auto">
             <div class="card">
                <div class="card-body">
                   <div class="row">
@@ -20,7 +20,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>CREATE POLICE AGENT ACCOUNT</h4>
+                           <h4>DRIVER SIGNUP</h4>
                           </center>
                      </div>
                   </div>
@@ -72,11 +72,23 @@
                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="NIC" TextMode="Number"></asp:TextBox>
                         </div>
                      </div>
-                    
+                     <div class="col-md-6">
+                        <label>Insurance Number</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Insurance Number" TextMode="Number"></asp:TextBox>
+                        </div>
+                     </div>
                   </div>
 
 
-                
+                   <div class="row">
+                   <div class="col-md-6">
+                        <label>Vehicle Register Number</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Vehicle Register Number"></asp:TextBox>
+                        </div>
+                     </div>
+                       </div>
 
 
                    <br />
@@ -109,7 +121,7 @@
                         <center>
                             <br />
                            <div class="form-group">
-                              <asp:Button class="btn btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="CREATE ACCOUNT" />
+                              <asp:Button class="btn btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="SIGN-UP" />
                            </div>
                         </center>
                      </div>
@@ -121,8 +133,10 @@
           </div>
             
          </div>
+    
+        
 
 
-
+    
 
 </asp:Content>
