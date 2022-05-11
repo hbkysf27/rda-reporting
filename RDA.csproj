@@ -84,7 +84,10 @@
     <Content Include="images\accidentreporting.jpg" />
     <Content Include="images\accs.jpg" />
     <Content Include="images\adminlogin.png" />
+    <Content Include="images\appr.png" />
     <Content Include="images\CS.JPG" />
+    <Content Include="images\divimage.jpg" />
+    <Content Include="images\rep1.png" />
     <Content Include="images\reportanaccident.png" />
     <Content Include="images\user.png" />
     <Content Include="Insurance Authority.aspx" />

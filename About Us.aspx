@@ -41,13 +41,16 @@ If you are a driver of a vehicle involved in a traffic crash, you must immediate
 When to report a traffic crash
 The driver of a vehicle must report a traffic crash when the incident occurred on a road or any place commonly used by the public.
 How to report a traffic crash
-Click here to report all traffic crashes involving injury or property damage that occurred 
+Click here to report all traffic crashes involving injury or property damage that occurred...
 
                         <br />
                         <br />
                         <center>
+                            <br />
                         <img class="img-fluid img-thumbnail" src="images/accident-insurance-infographics-vector-8407465.PNG" width="50%" />
                             </center>
+                        <br />
+                        <br />
 <h5>You will need to provide the following information:</h5>
 
                         <ul>

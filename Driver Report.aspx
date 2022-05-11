@@ -46,31 +46,10 @@
                        </div>
 
 
-                  <div class="row">
-                     <div class="col-md-4">
-                        <label>NIC Number</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="NIC Number" MaxLength="12"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Insurance Number</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Insurance Number" MaxLength="20"></asp:TextBox>
-                        </div>
-                     </div>
-
-                      <div class="col-md-4">
-                        <label>Vehicle Register Number</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Vehicle Register Number" MaxLength="20"></asp:TextBox>
-                        </div>
-                     </div>
-
-                  </div>
+                 
 
                      <div class="row">
-                     <div class="col-md-4">
+                     <div class="col-md-6">
                         <label>Cause for Accident</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Cause for accident" MaxLength="50"></asp:TextBox>
@@ -78,10 +57,18 @@
                      </div>
                      
 
-                      <div class="col-md-4">
-                        <label>Vehicle Register Number</label>
+                      <div class="col-md-6">
+                        <label>Vehicle Type</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Vehicle Register Number" MaxLength="10"></asp:TextBox>
+                           <select class="custom-select form-select" id="inputGroupSelect01">
+                                <option vslue="car" selected>Car</option>
+                                <option value="van">Van</option>
+                                 <option value="threewheel">Three Wheel</option>
+                                 <option value="bus">Bus</option>
+                                  <option value="bike">Bike</option>
+  </select>
+</div>
+
                         </div>
 
 
@@ -90,7 +77,7 @@
                      </div>
 
 
-                  </div>
+                  
 
                     <div class="row">
                      <div class="col-md-8">
@@ -173,7 +160,9 @@
                             <br />
                            <div class="form-group">
                                 <asp:Button ID="Button2" runat="server" Text="Report Accident" CssClass="btn btn-success" />
+                               
                               <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="UPDATE REPORT" />
+                               <br />
                                 <asp:Button class="btn btn-danger" ID="Button3" runat="server" Text="DELETE REPORT" />
                            </div>
                         </center>
@@ -184,7 +173,7 @@
             <a href="Home.aspx"><< Back to Home</a><br><br />
              </div>
           
-
+       
 
 
 
