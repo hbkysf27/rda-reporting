@@ -5,11 +5,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
+ 
    
 
-
-
+    <center>
+    <div class="one">
+  <h1>OUR FEATURES</h1>
+</div>
+        </center>
 
       <div class="container">
         
@@ -45,7 +48,7 @@
   <div class="row no-gutters">
     <div class="col-md-6">
       
-      <img src="images/rep1.jpg" class="card-img" alt="...">
+      <img src="images/rep1.png" class="card-img" alt="...">
            
     </div>
     <div class="col-md-8">
@@ -81,7 +84,7 @@
   <div class="row no-gutters">
     <div class="col-md-6">
         
-      <img src="images/appr.jpg" class="card-img" alt="...">
+      <img src="images/appr.png" class="card-img" alt="...">
            
     </div>
     <div class="col-md-8">
