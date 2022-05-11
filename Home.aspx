@@ -45,11 +45,11 @@
 
 
     </section>
-
+    <br />
      <section>
         <center><img src="images/ecofreindly1.jpg"  class="img-fluid" width="55%"  /></center>
             </section>
-
+    <br />
     <section>
        <div class="container">
          <div class="row">
@@ -86,6 +86,9 @@
             </div>
          </div>
       </div>
+        <br />
+        <br />
+
 
 
     </section>
