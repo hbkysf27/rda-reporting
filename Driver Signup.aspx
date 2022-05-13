@@ -121,7 +121,7 @@
                         <center>
                             <br />
                            <div class="form-group">
-                              <asp:Button class="btn btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="SIGN-UP" />
+                              <asp:Button class="btn btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="SIGN-UP" OnClick="Button1_Click" />
                            </div>
                         </center>
                      </div>

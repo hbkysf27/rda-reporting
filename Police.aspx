@@ -23,6 +23,10 @@
                                 <chartareas>
                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
                                 </chartareas>
+                                <Annotations>
+                                    <asp:LineAnnotation Name="Car">
+                                    </asp:LineAnnotation>
+                                </Annotations>
                             </asp:Chart>
                         </center>
                      </div>
