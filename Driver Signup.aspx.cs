@@ -30,6 +30,7 @@ namespace RDA
             else
             {
                 signupnewuser();
+                Response.Write("<script>alert('Sign-Up Successfull');</script>");
             }
            
         }
@@ -48,7 +49,7 @@ namespace RDA
                     con.Open();
 
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from driver_reg_tbl where userID='"+txtuserid.Text.Trim()+"';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from driver_acc where userID='" + txtuserid.Text.Trim()+"';", con);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -90,7 +91,7 @@ namespace RDA
                     con.Open();
 
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO driver_reg_tbl (fullname,dob,phone,email,nic,insurance_num,veh_reg_num,userID,pwd,acc_status) VALUES(@fullname,@dob,@phone,@email,@nic,@insurance_num,@veh_reg_num,@userID,@pwd,@acc_status)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO driver_acc (fullname,dob,phone,email,nic,insurance_num,veh_reg_num,userID,pwd,acc_status) VALUES(@fullname,@dob,@phone,@email,@nic,@insurance_num,@veh_reg_num,@userID,@pwd,@acc_status)", con);
 
                 cmd.Parameters.AddWithValue("@fullname", txtfname.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", txtdob.Text.Trim());
@@ -99,13 +100,14 @@ namespace RDA
                 cmd.Parameters.AddWithValue("@nic", txtnic.Text.Trim());
                 cmd.Parameters.AddWithValue("@insurance_num", txtinsurance.Text.Trim());
                 cmd.Parameters.AddWithValue("@veh_reg_num", txtvehreg.Text.Trim());
-                cmd.Parameters.AddWithValue("@userID", txtinsurance.Text.Trim());
+                cmd.Parameters.AddWithValue("@userID", txtuserid.Text.Trim());
                 cmd.Parameters.AddWithValue("@pwd", txtpwd.Text.Trim());
                 cmd.Parameters.AddWithValue("@acc_status", "Pending");
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Sign-Up Successfull, Go to User Login to Access Your Account');</script>");
+                Response.Write("<script>alert('Sign-Up Successfull');</script>");
+                Response.Redirect("Driver Login.aspx");
             }
             catch (Exception ex)
             {
