@@ -32,23 +32,26 @@
                      <div class="col">
                         <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="User ID"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtid" runat="server" placeholder="User ID"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="txtpwd" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                             <br />
                         </div>
                         <div class="form-group">
                             <center>
-                           <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="LOGIN" />
+                           <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" />
                            </center>
                             
                         </div>
                         <div class="form-group">
                             <br />
                             <center>
-                           <a href="User Signup.aspx"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="SIGN-UP" /></a>
+                                <asp:Button ID="Button2" runat="server" Text="SIGN-UP" Cssclass="btn btn-info btn-block btn-lg" value="SIGN-UP"/>
+                           
+                               
+                           </a>
                                 </center>
                         </div>
                      </div>
