@@ -20,11 +20,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-
-   <div class="container-fluid">
+   
+   <div class="container">
         
       <div class="row">
-         <div class="col-md-5">
+         <div class="col-md-8 mx-auto">
             <div class="card">
                <div class="card-body">
                   <div class="row">
@@ -79,7 +79,7 @@
 
                         <label>Cause for Accident</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtcause" runat="server" placeholder="Cause for accident" MaxLength="50"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtcause" runat="server" placeholder="Cause for accident"  Rows="3" MaxLength="100" TextMode="MultiLine" Width="270px"></asp:TextBox>
                         </div>
                      </div>
                      
@@ -182,14 +182,16 @@
                   </div>
                </div>
             </div>
-            <a href="Home.aspx"><< Back to Home</a><br><br />
+            <a href="Home.aspx"><< Back to Home</a><br>
+            <center><a href="#Update"><button type="button" class="btn btn-info">REDIRECT TO UPDATE ACCOUNT</button></a><br><br /></center>
              </div>
+          
           
        
 
 
 
-    <div class="col-md-7">
+<!--<div class="col-md-7">
 
          <div class="card">
                <div class="card-body">
@@ -243,10 +245,110 @@
 
                </div>
             </div>
-    </div>
+    </div>-->
+
+
+           <div class="row" id="Update">
+         <div class="col-md-7 mx-auto">
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-md-5-auto">
+                        <center>
+                           <h4>USER DETAILS</h4>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           
+                            <img width="100px" src="images/adminlogin.png" />
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-5 mx-auto">
+                        <label>Driver ID</label>
+                        <div class="form-group">
+                           <div class="input-group">
+                              <asp:TextBox CssClass="form-control" ID="id" runat="server" placeholder="User ID"></asp:TextBox>
+                              <asp:LinkButton class="btn btn-primary" ID="primary" runat="server" OnClick="primary_Click" ><i class="fas fa-check-circle"></i></asp:LinkButton>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-5 mx-auto">
+                        <label>Full Name</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="updname" runat="server" placeholder="Full Name" ></asp:TextBox>
+                        </div>
+                     </div>
+                    
+                  </div>
+                  <div class="row">
+                     <div class="col-md-5 mx-auto">
+                        <label>Insurance Number</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="updins" runat="server" placeholder="Insurance Number" ></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-5 mx-auto">
+                        <label>Vehicle Register Number</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="updreg" runat="server" placeholder="Vehicle Register Number" ></asp:TextBox>
+                        </div>
+                     </div>
+                  
+                  </div>
+
+
+
+                   <div class="row">
+                     <div class="col-md-5 mx-auto">
+                        <label>Password</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="updpwd" runat="server" placeholder="Password" TextMode="Password" ></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-5 mx-auto">
+                        <label>E-mail</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="updemail" runat="server" placeholder="Email Address" ></asp:TextBox>
+                        </div>
+                     </div>
+                       </div>
+                  
+                 <br />
+                  <div class="row">
+                     <div class="col-md-5 mx-auto">
+                         <center>
+
+                              <asp:Button ID="Button1" class="btn btn-lg btn-block btn-info" runat="server" Text="Update User" OnClick="Button1_Click" />
+                       
+                             <br />
+                         <br />
+                          <asp:Button ID="deleteacc" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete User Permanently" OnClick="deleteacc_Click" />
+                             </center>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a href="Home.aspx"><< Back to Home</a><br>
+            <br>
+         </div>
+      
+      </div>
+
+         
 
           </div>
        </div>
+    
    
 
    
