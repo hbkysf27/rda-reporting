@@ -1,5 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Driver Report.aspx.cs" Inherits="RDA.Driver_Report" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgview').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -14,9 +30,8 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                          
-                            <img width="100px" class="img-thumbnail" src="images/accreport.jpg" />
-                        </center>
+                            <img  width="100px" class="img-thumbnail" src="Report_images/accreport.jpg" id="imgview" height="150px"/>
+                            </center>
                      </div>
                   </div>
                   <div class="row">
@@ -33,6 +48,16 @@
                         <hr>
                      </div>
                   </div>
+                  
+                    <div class="row">
+                     <div class="col-md-6">
+                        <label>Driver ID</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="txtid" runat="server" placeholder="Driver ID"></asp:TextBox>
+                        </div>
+                     </div>
+                        </div>
+                   
 
 
                     <div class="row">
@@ -40,19 +65,21 @@
                        <h5>Accident Details</h5>
                         <label>Upload Image</label>
                         <div class="form-group">
-                            <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control"/>
+                          
+                               <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control" onchange="readURL(this);"/>
                         </div>
                      </div>
                        </div>
 
-
-                 
+                   
+                                    
 
                      <div class="row">
                      <div class="col-md-6">
+
                         <label>Cause for Accident</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Cause for accident" MaxLength="50"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtcause" runat="server" placeholder="Cause for accident" MaxLength="50"></asp:TextBox>
                         </div>
                      </div>
                      
@@ -60,13 +87,21 @@
                       <div class="col-md-6">
                         <label>Vehicle Type</label>
                         <div class="form-group">
-                           <select class="custom-select form-select" id="inputGroupSelect01">
-                                <option vslue="car" selected>Car</option>
-                                <option value="van">Van</option>
-                                 <option value="threewheel">Three Wheel</option>
-                                 <option value="bus">Bus</option>
-                                  <option value="bike">Bike</option>
-  </select>
+
+
+                            <asp:DropDownList ID="dropdownvehtype" runat="server" CssClass="form-control">
+
+                  <asp:ListItem Value="car"> car </asp:ListItem>
+                  <asp:ListItem Value="van"> van </asp:ListItem>
+                  <asp:ListItem Value="threewheel"> threewheel </asp:ListItem>
+                  <asp:ListItem Value="bus"> bus </asp:ListItem>
+                  <asp:ListItem Value="bike"> bike </asp:ListItem>
+
+               
+                                </asp:DropDownList>
+
+
+                           
 </div>
 
                         </div>
@@ -83,19 +118,11 @@
                      <div class="col-md-8">
                         <label>Accident Desciption</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Accident Description" Rows="5" MaxLength="100" TextMode="MultiLine" Width="350px"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtaccdescr" runat="server" placeholder="Accident Description" Rows="5" MaxLength="100" TextMode="MultiLine" Width="350px"></asp:TextBox>
                         </div>
                      </div>
-                     
-
-                      
-
-
+                                                                 
                   </div>
-
-
-
-
 
 
                     <div class="row">
@@ -105,20 +132,20 @@
                          
                         <label>Langitude</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Langitude"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtlang" runat="server" placeholder="Langitude"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Logitude</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox12" runat="server" placeholder="Insurance Number" ></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtlong" runat="server" placeholder="Longitude" ></asp:TextBox>
                         </div>
                      </div>
 
                       <div class="col-md-4">
                         <label>Province</label>
                        <div class="form-group">
-                            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
+                            <asp:DropDownList ID="dropdownprovince" runat="server" CssClass="form-control">
                                 <asp:ListItem Text="Western Province" Value="Western Province" Selected/>
                                   <asp:ListItem Text="North Western Province" Value="North Western Province"/>
                                 <asp:ListItem Text="Central Province" Value="Central Province" />
@@ -137,29 +164,18 @@
                      </div>
 
                   </div>
-
-
-
-                 
-                  
-                    
-                    
-                
-
-
-                  
-
-
-                   <br />
-
-                  
+                           
+                                                   
+                               
+                           <br />
+                                    
                  
                   <div class="row">
                      <div class="col-8 mx-auto">
                         <center>
                             <br />
                            <div class="form-group">
-                                <asp:Button ID="Button2" runat="server" Text="Report Accident" CssClass="btn btn-success" />
+                                <asp:Button ID="btnreport" runat="server" Text="Report Accident" CssClass="btn btn-success" OnClick="Button2_Click" />
                       </div>
                         </center>
                      </div>
@@ -189,7 +205,9 @@
                         <center>
                            <h4>YOUR REPORTS</h4>
 
-                                   </center>
+                            <span>Report Status -</span>
+                            <asp:Label class="badge rounded-pill bg-warning" ID="Label2" runat="server" Text="Pending Approval"></asp:Label>
+                          </center>
                      </div>
                   </div>
                   <div class="row">
@@ -201,7 +219,18 @@
 
                      <div class="row">
                      <div class="col">
-                         <asp:GridView class="table table-striped tabel-bordered" ID="GridView1" runat="server"></asp:GridView>
+
+
+
+
+                    
+
+                         
+                                           
+
+
+
+                         
                         
 
 
@@ -216,7 +245,9 @@
             </div>
     </div>
 
-
+          </div>
+       </div>
+   
 
    
 
