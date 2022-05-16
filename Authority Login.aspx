@@ -33,11 +33,14 @@
                       <div class="col">
                         <label>Account Type</label>
                         <div class="form-group">
-                           <select class="custom-select form-select" id="inputGroupSelect01">
-                                <option value="Police" selected>Police Authority</option>
-                                <option value="Insurance">Insurance Authority</option>
-                                 <option value="rda">RDA Authority</option>
-                                </select>
+                          
+
+                            <asp:DropDownList ID="acctype" runat="server"  CssClass="form-control">
+                                <asp:ListItem>Police</asp:ListItem>
+                                <asp:ListItem>Insurance</asp:ListItem>
+                                <asp:ListItem>RDA</asp:ListItem>
+                            </asp:DropDownList>
+
                             </div>
 
                         </div>
@@ -47,16 +50,16 @@
                      <div class="col">
                         <label>Authority ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Authority ID"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtid" runat="server" placeholder="Authority ID"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="txtpwd" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                             <br />
                         </div>
                         <div class="form-group">
                             <center>
-                           <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="LOGIN" />
+                           <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" />
                            </center>
                             
                         </div>
