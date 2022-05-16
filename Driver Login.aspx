@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <br />
                             <center>
-                                <asp:Button ID="Button2" runat="server" Text="SIGN-UP" Cssclass="btn btn-info btn-block btn-lg" value="SIGN-UP"/>
+                                <asp:Button ID="Button2" runat="server" Text="SIGN-UP" Cssclass="btn btn-info btn-block btn-lg" value="SIGN-UP" OnClick="Button2_Click"/>
                            
                                
                            </a>

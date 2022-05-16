@@ -49,6 +49,13 @@ namespace RDA
                 Response.Write("<script>alert('Exception Occured "+ex+"');</script>");
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Driver Signup.aspx");
+        }
+
+        
     }
 }
        
