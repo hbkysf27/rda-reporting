@@ -94,6 +94,7 @@
     <Content Include="images\reportanaccident.png" />
     <Content Include="images\user.png" />
     <Content Include="Insurance Authority.aspx" />
+    <Content Include="Insurance.aspx" />
     <Content Include="Police RDA Insurance.aspx" />
     <Content Include="Police.aspx" />
     <Content Include="RDA Authority.aspx" />
@@ -2164,8 +2165,10 @@
     <Content Include="images\vehicle track.jpg" />
     <Content Include="Master Admin Login.aspx" />
     <Content Include="Driver Signup.aspx" />
+    <Content Include="RDA.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="Report_images\accreport.jpg" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About Us.aspx.cs">
@@ -2223,6 +2226,13 @@
     </Compile>
     <Compile Include="Insurance Authority.aspx.designer.cs">
       <DependentUpon>Insurance Authority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance.aspx.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insurance.aspx.designer.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Police RDA Insurance.aspx.cs">
       <DependentUpon>Police RDA Insurance.aspx</DependentUpon>
@@ -2288,12 +2298,19 @@
     <Compile Include="Driver Signup.aspx.designer.cs">
       <DependentUpon>Driver Signup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="RDA.aspx.cs">
+      <DependentUpon>RDA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="RDA.aspx.designer.cs">
+      <DependentUpon>RDA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
