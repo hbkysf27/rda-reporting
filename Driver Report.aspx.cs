@@ -16,13 +16,27 @@ namespace RDA
         string strcon = ConfigurationManager.ConnectionStrings["rdacon"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
+
+        }
+
+         void updateaccstatus()
+        {
+            throw new NotImplementedException();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             createreport();
+            
         }
+
+
+        
+
+
+
         void createreport()
         {
             try
@@ -117,6 +131,19 @@ namespace RDA
             }
         }
 
+        void checkupdinputs()
+        {
+            if(updemail.Text==""||updins.Text==""||updname.Text==""||updpwd.Text==""||updreg.Text=="")
+            {
+                Response.Write("<script>alert('Please Enter The Required Fields');</script>");
+            }
+            else
+            {
+                updatedriverbyid();
+            }
+        }
+
+
         bool checkifdriverexists()
         {
             try
@@ -205,8 +232,22 @@ namespace RDA
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            updatedriverbyid();
+            checkupdinputs();
+            //updatedriverbyid();
 
+        }
+
+
+        void checkinputs()
+        {
+            if(txtaccdescr.Text==""||txtcause.Text==""||txtid.Text==""||txtlang.Text==""||txtlong.Text=="")
+            {
+                Response.Write("<script>alert('Please Fill Out This Fomrm Completely!');</script>");
+            }
+            else
+            {
+                
+            }
         }
 
 
@@ -239,6 +280,12 @@ namespace RDA
                     cleartext();
 
 
+
+
+
+                    
+
+
                 }
                 catch (Exception ex)
                 {
@@ -251,7 +298,19 @@ namespace RDA
             {
                 Response.Write("<script>alert('Driver already Exists');</script>");
             }
+
+
+
+
+            
+
+
+
         }
+
+
+
+       
 
 
 
@@ -259,3 +318,4 @@ namespace RDA
     }
 
 }
+

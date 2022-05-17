@@ -23,6 +23,29 @@ namespace RDA
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+            checkinputs();
+        }
+
+
+
+
+
+        void checkinputs()
+        {
+            if(txtvehreg.Text==""||txtuserid.Text==""||txtpwd.Text==""||txtphone.Text==""||txtnic.Text==""||txtinsurance.Text==""||txtfname.Text==""||txtemail.Text=="")
+            {
+                Response.Write("<script>alert('Please Enter Required Fields');</script>");
+            }
+            else
+            {
+                memberexistance();
+            }
+        }
+
+
+
+        void memberexistance()
+        {
             if (checkmemberexist())
             {
                 Response.Write("<script>alert('User Already Exists with the Same ID, Try new ID');</script>");
@@ -32,7 +55,7 @@ namespace RDA
                 signupnewuser();
                 Response.Write("<script>alert('Sign-Up Successfull');</script>");
             }
-           
+
         }
 
 
@@ -108,6 +131,7 @@ namespace RDA
                 con.Close();
                 Response.Write("<script>alert('Sign-Up Successfull');</script>");
                 Response.Redirect("Driver Login.aspx");
+                Response.Write("<script>alert('Sign-Up Successfull');</script>");
             }
             catch (Exception ex)
             {

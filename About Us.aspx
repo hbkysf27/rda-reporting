@@ -1,7 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="About Us.aspx.cs" Inherits="RDA.About_Us" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+            
+
+    
+       
+            
+body {
+    background: #edc0bf;
+    background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
+    
+    margin: 0;
+     font-family: 'Inter', sans-serif;
+}
+    
+
+    </style>
+
+
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+
       <center><img src="images/CS.JPG" class="img-fluid img-thumbnail" alt="this is a image" width="30%" r/></center> 
 
     

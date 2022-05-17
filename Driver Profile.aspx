@@ -1,5 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Driver Profile.aspx.cs" Inherits="RDA.Driver_Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+    </script>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -10,7 +18,7 @@
      <div class="container-fluid">
         
       <div class="row">
-         <div class="col-md-5">
+         <div class="col-md-5 mx-auto">
             <div class="card">
                <div class="card-body">
                   <div class="row">
@@ -37,11 +45,9 @@
                   </div>
                    <div class="row">
                      <div class="col-md-4">
-                        <label>User ID</label>
+                       
                         <div class="form-group">
                            <div class="input-group">
-                              <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Driver ID"></asp:TextBox>
-                               <asp:Button ID="Button3" runat="server" Text="OK" class="form-control btn btn-primary" OnClick="Button3_Click"/>
                            </div>
                         </div>
                      </div>
@@ -112,6 +118,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
+                            <br />
                            <span class="badge rounded-pill bg-info text-dark"><h6 style="color:whitesmoke">Login Credentials</h6> </span>
                         </center>
                      </div>
@@ -161,11 +168,13 @@
             <a href="Home.aspx"><< Back to Home</a><br><br />
              </div>
           
+             <br />
+             <br />
 
 
 
 
-    <div class="col-md-7">
+    <div class="col-md-7 mx-auto">
 
          <div class="card">
                <div class="card-body">
@@ -184,6 +193,7 @@
                             <span>Report Status -</span>
                             <asp:Label class="badge rounded-pill bg-warning" ID="Label2" runat="server" Text="Pending Approval"></asp:Label>
                           </center>
+                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
                      </div>
                   </div>
                   <div class="row">

@@ -26,6 +26,7 @@
       <div class="row">
          <div class="col-md-8 mx-auto">
             <div class="card">
+                
                <div class="card-body">
                   <div class="row">
                      <div class="col">
@@ -53,7 +54,7 @@
                      <div class="col-md-6">
                         <label>Driver ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtid" runat="server" placeholder="Driver ID"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtid" runat="server" placeholder="Driver ID" MaxLength="15"></asp:TextBox>
                         </div>
                      </div>
                         </div>
@@ -118,7 +119,7 @@
                      <div class="col-md-8">
                         <label>Accident Desciption</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtaccdescr" runat="server" placeholder="Accident Description" Rows="5" MaxLength="100" TextMode="MultiLine" Width="350px"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtaccdescr" runat="server" placeholder="Accident Description" Rows="5" MaxLength="300" TextMode="MultiLine" Width="350px"></asp:TextBox>
                         </div>
                      </div>
                                                                  
@@ -253,17 +254,21 @@
             <div class="card">
                <div class="card-body">
                   <div class="row">
-                     <div class="col-md-5-auto">
-                        <center>
-                           <h4>USER DETAILS</h4>
-                        </center>
-                     </div>
+                     
                   </div>
-                  <div class="row">
+                 <div class="row">
                      <div class="col">
                         <center>
-                           
-                            <img width="100px" src="images/adminlogin.png" />
+                           <img width="100px" src="images/user.png"/>
+                        </center>
+                     </div>
+                     <div class="col-md-5-auto">
+                        <center>
+                            <br />
+                            YOUR ACCOUNT<h4>&nbsp;DETAILS</h4>
+                            <span >
+                                <asp:Label class="badge rounded-pill bg-info " id="Label1" runat="server" Text="Account Status"></asp:Label>
+                                </span>
                         </center>
                      </div>
                   </div>
@@ -277,7 +282,7 @@
                         <label>Driver ID</label>
                         <div class="form-group">
                            <div class="input-group">
-                              <asp:TextBox CssClass="form-control" ID="id" runat="server" placeholder="User ID"></asp:TextBox>
+                              <asp:TextBox CssClass="form-control" ID="id" runat="server" placeholder="User ID" MaxLength="15"></asp:TextBox>
                               <asp:LinkButton class="btn btn-primary" ID="primary" runat="server" OnClick="primary_Click" ><i class="fas fa-check-circle"></i></asp:LinkButton>
                            </div>
                         </div>
@@ -285,7 +290,7 @@
                      <div class="col-md-5 mx-auto">
                         <label>Full Name</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="updname" runat="server" placeholder="Full Name" ></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" MaxLength="15" ID="updname" runat="server" placeholder="Full Name"  ></asp:TextBox>
                         </div>
                      </div>
                     
@@ -294,13 +299,13 @@
                      <div class="col-md-5 mx-auto">
                         <label>Insurance Number</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="updins" runat="server" placeholder="Insurance Number" ></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="updins" runat="server" placeholder="Insurance Number" MaxLength="15" ></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-5 mx-auto">
                         <label>Vehicle Register Number</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="updreg" runat="server" placeholder="Vehicle Register Number" ></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="updreg" runat="server" placeholder="Vehicle Register Number" MaxLength="12" ></asp:TextBox>
                         </div>
                      </div>
                   
@@ -312,13 +317,13 @@
                      <div class="col-md-5 mx-auto">
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="updpwd" runat="server" placeholder="Password" TextMode="Password" ></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="updpwd" runat="server" placeholder="Password" TextMode="Password" MaxLength="25" ></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-5 mx-auto">
                         <label>E-mail</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="updemail" runat="server" placeholder="Email Address" ></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="updemail" runat="server" placeholder="Email Address" MaxLength="25" ></asp:TextBox>
                         </div>
                      </div>
                        </div>
@@ -347,14 +352,15 @@
          
 
           </div>
+
+
+
+
+
+
+
        </div>
-    
    
-
-   
-
-
-
 
 
 </asp:Content>

@@ -2168,6 +2168,7 @@
     <Content Include="RDA.aspx" />
     <Content Include="Reports.aspx" />
     <Content Include="Report_images\accreport.jpg" />
+    <Content Include="View Accident.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2311,6 +2312,13 @@
     </Compile>
     <Compile Include="Reports.aspx.designer.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Accident.aspx.cs">
+      <DependentUpon>View Accident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Accident.aspx.designer.cs">
+      <DependentUpon>View Accident.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

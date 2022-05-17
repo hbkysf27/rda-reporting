@@ -52,13 +52,13 @@
                      <div class="col-md-6">
                         <label>Contact No</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtphone" runat="server" placeholder="Contact No" TextMode="Phone"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtphone" runat="server" placeholder="Contact No" TextMode="Phone" MaxLength="12"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-6">
                         <label>Email Address</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="E-mail" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="E-mail" TextMode="Email" MaxLength="25"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -69,13 +69,13 @@
                      <div class="col-md-6">
                         <label>NIC Number</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtnic" runat="server" placeholder="NIC" TextMode="Number"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtnic" runat="server" placeholder="NIC"  MaxLength="15"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-6">
                         <label>Insurance Number</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtinsurance" runat="server" placeholder="Insurance Number" TextMode="Number"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtinsurance" runat="server" placeholder="Insurance Number" TextMode="Number" MaxLength="15"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -85,7 +85,7 @@
                    <div class="col-md-6">
                         <label>Vehicle Register Number</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="txtvehreg" runat="server" placeholder="Vehicle Register Number"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtvehreg" runat="server" placeholder="Vehicle Register Number" MaxLength="12"></asp:TextBox>
                         </div>
                      </div>
                        </div>
@@ -105,13 +105,13 @@
                      <div class="col-md-6">
                         <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="txtuserid" runat="server" placeholder="User ID"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="txtuserid" runat="server" placeholder="User ID" MaxLength="15"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-6">
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="txtpwd" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="txtpwd" runat="server" placeholder="Password" TextMode="Password" MaxLength="15"></asp:TextBox>
                         </div>
                      </div>
                      

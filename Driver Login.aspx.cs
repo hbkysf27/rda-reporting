@@ -17,6 +17,18 @@ namespace RDA
         string strcon = ConfigurationManager.ConnectionStrings["rdacon"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)
         {
+            checktxt();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Driver Signup.aspx");
+        }
+
+
+
+        void loginfunc()
+        {
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -46,13 +58,21 @@ namespace RDA
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('Exception Occured "+ex+"');</script>");
+                Response.Write("<script>alert('Exception Occured " + ex + "');</script>");
             }
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+
+        void checktxt()
         {
-            Response.Redirect("Driver Signup.aspx");
+            if(txtid.Text==""||txtpwd.Text=="")
+            {
+                Response.Write("<script>alert('Please Enter Required Fields');</script>");
+            }
+            else
+            {
+                loginfunc();
+            }
         }
 
         

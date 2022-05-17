@@ -122,5 +122,15 @@ namespace RDA
 
             Response.Redirect("Home.aspx");
         }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("View Accident.aspx");
+        }
+
+        protected void hellouser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Driver Report.aspx");
+        }
     }
 }

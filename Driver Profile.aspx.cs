@@ -17,7 +17,7 @@ namespace RDA
         string strcon = ConfigurationManager.ConnectionStrings["rdacon"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            getdriverbyid();
         }
 
         //upddate account
@@ -38,41 +38,40 @@ namespace RDA
         }
 
 
-        bool filldriverprofilevalues()
+
+
+        void getdriverbyid()
         {
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
-                if(con.State==ConnectionState.Closed)
+                if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * FROM driver_acc where userID='"+txtid.Text.Trim()+"'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from driver_acc where userID='" + Session["username"].ToString() + "';", con);
+                
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                if(dt.Rows.Count>=1)
-                {
-                    return true;
-
-                }
-                else
-                {
-                    return false;
-                }    
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+                
+                             
+                
+               
+                 
             }
-            
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-                return false;
-
+                Response.Write("<script>alert('Exception Occured " + ex + "');</script>");
             }
-        }
 
-        void addnewvalues()
-        {
+
 
         }
+
+
+
     }
 }
