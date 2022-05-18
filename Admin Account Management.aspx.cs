@@ -195,5 +195,133 @@ namespace RDA
             txtemail.Text = "";
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            checkinputs();
+        }
+
+
+
+
+        void checkinputs()
+        {
+            if (ctxtdob.Text == "" || ctxtemail.Text == "" || ctxtfname.Text == "" || ctxtnic.Text == "" || ctxtuname.Text == "" || ctxtpwd.Text == "" || ctxtphone.Text == "")
+            {
+                Response.Write("<script>alert('Please Fill out this form Completely');</script>");
+            }
+            else
+            {
+                fsign();
+            }
+
+            void fsign()
+            {
+                if (checkmemberexist())
+                {
+                    Response.Write("<script>alert('User Already Exists with the Same ID, Try new ID');</script>");
+                }
+                else
+                {
+                    signupnewuser();
+                }
+            }
+
+            bool checkmemberexist()
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+
+                    }
+                    SqlCommand cmd = new SqlCommand("SELECT * from InsRdaPol_tbl where userID='" + ctxtuname.Text.Trim() + "';", con);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count >= 1)
+                    {
+                        return true;
+
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                    return false;
+                }
+
+            }
+            void signupnewuser()
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+
+                    }
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO InsRdaPol_tbl (fullname,dob,phone,email,nic,acc_type,userID,pwd,acc_status) VALUES(@fullname,@dob,@phone,@email,@nic,@acc_type,@userID,@pwd,@acc_status)", con);
+
+                    cmd.Parameters.AddWithValue("@fullname", ctxtfname.Text.Trim());
+                    cmd.Parameters.AddWithValue("@dob", ctxtdob.Text.Trim());
+                    cmd.Parameters.AddWithValue("@phone", ctxtphone.Text.Trim());
+                    cmd.Parameters.AddWithValue("@email", ctxtemail.Text.Trim());
+                    cmd.Parameters.AddWithValue("@nic", ctxtnic.Text.Trim());
+                    cmd.Parameters.AddWithValue("@acc_type", acctype.SelectedItem.Value);
+                    cmd.Parameters.AddWithValue("@userID", ctxtuname.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pwd", ctxtpwd.Text.Trim());
+                    cmd.Parameters.AddWithValue("@acc_status", "Pending");
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<script>alert('Sign-Up Successfull, Go to User Login to Access Your Account');</script>");
+                    clearfields();
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
+            }
+        }
+        void clearfields()
+        {
+
+            ctxtdob.Text = "";
+            ctxtemail.Text = "";
+            ctxtfname.Text = "";
+            ctxtuname.Text = "";
+            ctxtnic.Text = "";
+            ctxtphone.Text = "";
+            ctxtpwd.Text = "";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
-}
+       
+    }
+

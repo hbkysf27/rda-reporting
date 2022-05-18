@@ -57,3 +57,7 @@ C:\Users\yusuf\source\repos\RDA\obj\Debug\RDA.csproj.CoreCompileInputs.cache
 C:\Users\yusuf\source\repos\RDA\obj\Debug\RDA.csproj.CopyComplete
 C:\Users\yusuf\source\repos\RDA\obj\Debug\RDA.dll
 C:\Users\yusuf\source\repos\RDA\obj\Debug\RDA.pdb
+C:\Users\yusuf\source\repos\RDA\bin\EntityFramework.dll
+C:\Users\yusuf\source\repos\RDA\bin\EntityFramework.SqlServer.dll
+C:\Users\yusuf\source\repos\RDA\bin\EntityFramework.xml
+C:\Users\yusuf\source\repos\RDA\bin\EntityFramework.SqlServer.xml

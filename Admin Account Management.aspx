@@ -134,6 +134,145 @@
       </div>
    </div>
 
+    <br />
+    <br />
+    <br />
+
+
+      <div class="container">
+        
+      <div class="row">
+         <div class="col-md-6 mx-auto">
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <img width="100px" src="images/adminlogin.png"/>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <h4>CREATE USER ACCOUNTS</h4>
+                          </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>Full Name</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="ctxtfname" runat="server" placeholder="Full Name" MaxLength="20" ></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Date of Birth</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="ctxtdob" runat="server" placeholder="Date Of Birth" TextMode="Date"></asp:TextBox>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+
+
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>Contact No</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="ctxtphone" runat="server" placeholder="Contact No" TextMode="Phone" MaxLength="13"></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Email Address</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="ctxtemail" runat="server" placeholder="E-mail" TextMode="Email" MaxLength="30"></asp:TextBox>
+                        </div>
+                     </div>
+                  </div>
+                  
+                    
+                    
+                    <div class="row">
+                     <div class="col-md-6">
+                        <label>NIC Number</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="ctxtnic" runat="server" placeholder="NIC" TextMode="Number" MaxLength="14" ></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Account Type</label>
+                        <div class="form-group">
+             
+                            <asp:DropDownList id="acctype" CssClass="form-control"
+                    runat="server">
+
+                  <asp:ListItem Value="Police">Police</asp:ListItem>
+                  <asp:ListItem Value="Insurance">Insurance</asp:ListItem>
+                  <asp:ListItem Value="RDA">RDA</asp:ListItem>
+                  
+
+               </asp:DropDownList>
+
+
+</div>
+                        
+
+                        </div>
+                  </div>
+                     <br />
+
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <span class="badge rounded-pill bg-info text-dark"><h6 style="color:whitesmoke">Login Credentials</h6> </span>
+                        </center>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>User Name</label>
+                        <div class="form-group">
+                           <asp:TextBox class="form-control" ID="ctxtuname" runat="server" placeholder="User Name" MaxLength="20"></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Password</label>
+                        <div class="form-group">
+                           <asp:TextBox class="form-control" ID="ctxtpwd" runat="server" placeholder="Password" TextMode="Password" MaxLength="25"></asp:TextBox>
+                        </div>
+                     </div>
+                     
+                  </div>
+                  <div class="row">
+                     <div class="col-8 mx-auto">
+                        <center>
+                            <br />
+                           <div class="form-group">
+                              <asp:Button class="btn btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="SIGN-UP" OnClick="Button1_Click" />
+                           </div>
+                        </center>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a href="Home.aspx"><< Back to Home</a><br><br>
+             </div>
+          </div>
+            
+         </div>
+
+      
+   
+
 
 
 </asp:Content>

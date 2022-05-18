@@ -92,7 +92,7 @@
                  <br />
                   <div class="row">
                      <div class="col-8 mx-auto">
-                        <asp:Button ID="deleterep" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete Report Permanently" OnClick="deleterep_Click" />
+                        <asp:Button ID="deleterep" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete Report Permanently" OnClick="deleterep_Click1"/>
                      </div>
                   </div>
                </div>

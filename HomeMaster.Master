@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Home</title>
+    <title></title>
 
     <%--bootstrap.css--%>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -30,6 +30,20 @@
 
      <%--bootstrap.js--%>
     <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+
+    
+   
+
+    
+
+    
+ 
+
+
+
+
 
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -69,7 +83,27 @@
           </ul>
 
             <ul class="navbar-nav mr-auto">
+
                         <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="hellouser" runat="server" Visible="False" OnClick="hellouser_Click">Hello user</asp:LinkButton>
+
+                        </li>
+                          <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="idrda" runat="server" Visible="False" OnClick="idrda_Click">RDA</asp:LinkButton>
+
+                          </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="idinsurance" runat="server" Visible="False" OnClick="idinsurance_Click">Insurance</asp:LinkButton>
+
+                        </li>
+
+                <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="idpolice" runat="server" Visible="False" OnClick="idpolice_Click">Police</asp:LinkButton>
+
+                        </li>
+                        <li class="nav-item active">
+
+
                             <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View Accidents</asp:LinkButton>
                         </li>
                         
@@ -86,10 +120,8 @@
                             <asp:LinkButton class="nav-link" ID="logout" runat="server" Visible="False" OnClick="logout_Click">Logout</asp:LinkButton>
                         </li>
 
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="hellouser" runat="server" Visible="False" OnClick="hellouser_Click">Hello user</asp:LinkButton>
-
-                        </li>
+                       
+                        
                     </ul>
                 </div>
 
