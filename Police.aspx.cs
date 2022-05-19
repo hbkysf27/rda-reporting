@@ -58,6 +58,10 @@ namespace RDA
             }
         }
 
+
+
+        
+
         void deletereport()
         {
             if (checkifuserexists())
@@ -187,7 +191,21 @@ namespace RDA
 
         protected void primary_Click(object sender, EventArgs e)
         {
-            getuserbyid();
+            checkidinput();
+        }
+
+
+
+        void checkidinput()
+        {
+            if (txtid.Text == "")
+            {
+                Response.Write("<script>alert('Please Enter the ID');</script>");
+            }
+            else
+            {
+                getuserbyid();
+            }
         }
 
         protected void Chart1_Load(object sender, EventArgs e)

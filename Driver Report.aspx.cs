@@ -21,15 +21,25 @@ namespace RDA
 
         }
 
-         void updateaccstatus()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            createreport();
+            validate();
             
+        }
+
+
+        void validate()
+        {
+            if(txtaccdescr.Text==""||txtcause.Text==""||txtlang.Text==""||txtlong.Text==""||txtid.Text=="")
+            {
+                Response.Write("<script>alert('Please Fill The form Completely');</script>");
+            }
+            else
+            {
+                createreport();
+            }
         }
 
 
@@ -125,6 +135,16 @@ namespace RDA
             {
                 Response.Write("<script>alert('Invalid User ID');</script>");
             }
+        }
+
+
+        void clearupdate()
+        {
+            updemail.Text = "";
+            updins.Text = "";
+            updname.Text = "";
+            updpwd.Text = "";
+            updreg.Text = "";
         }
 
         void checkupdinputs()
@@ -283,7 +303,7 @@ namespace RDA
                     cmd.ExecuteNonQuery();
                     con.Close();
                     Response.Write("<script>alert('User Account Updated Successfully');</script>");
-                    cleartext();
+                    clearupdate();
 
 
 

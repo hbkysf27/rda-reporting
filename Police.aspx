@@ -202,7 +202,7 @@
         <div class="row">
                      <div class="col">
                         <center>
-                           <h3>TYPES OF ACCIDENT</h3>
+                        <!--   <h3>TYPES OF ACCIDENT</h3>-->
                         </center>
                      </div>
                   </div>
