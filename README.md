@@ -1,6 +1,3 @@
-Here's a README template you can use for your GitHub repository:
-
----
 
 # Accident Reporting System - RDA
 
